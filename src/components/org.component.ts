@@ -42,10 +42,10 @@ export class AppOrgComponent {
           })
           .linkUpdate(function (d, i, arr) {
             d3.select(this)
-              .attr('stroke', (d) =>
+              .attr('stroke', (d:any) =>
                 d.data._upToTheRootHighlighted ? '#152785' : '#E4E2E9'
               )
-              .attr('stroke-width', (d) =>
+              .attr('stroke-width', (d:any) =>
                 d.data._upToTheRootHighlighted ? 5 : 1
               );
 
@@ -61,7 +61,7 @@ export class AppOrgComponent {
                <img src=" ${
                  d.data.imageUrl
                }" style="position:absolute;margin-top:-20px;margin-left:${20}px;border-radius:100px;width:40px;height:40px;" />
-               
+
               <div style="color:#08011E;position:absolute;right:20px;top:17px;font-size:10px;"><i class="fas fa-ellipsis-h"></i></div>
 
               <div style="font-size:15px;color:#08011E;margin-left:20px;margin-top:32px"> ${
